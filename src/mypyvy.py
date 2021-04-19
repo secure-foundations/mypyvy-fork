@@ -20,7 +20,7 @@ import utils
 import relaxed_traces
 
 import pd
-import pd_fol
+#import pd_fol
 
 T = TypeVar('T')
 
@@ -680,7 +680,7 @@ def parse_args(args: List[str]) -> utils.MypyvyArgs:
     all_subparsers.append(relax_subparser)
 
     all_subparsers += pd.add_argparsers(subparsers)
-    all_subparsers += pd_fol.add_argparsers(subparsers)
+    #all_subparsers += pd_fol.add_argparsers(subparsers)
 
     for s in all_subparsers:
         s.add_argument('--forbid-parser-rebuild', action=utils.YesNoAction, default=False,
